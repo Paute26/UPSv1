@@ -3,6 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
+import { getFirestore, provideFirestore } from '@angular/fire/firestore';
 
 @NgModule({
   declarations: [
@@ -10,7 +12,9 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    provideFirebaseApp(() => initializeApp({"projectId":"upsv1-2","appId":"1:294097294392:web:87a3c8212748ff663382cd","storageBucket":"upsv1-2.appspot.com","apiKey":"AIzaSyC77KkbbRY_SIR7T5lBLGy84EOZhXFyY5Y","authDomain":"upsv1-2.firebaseapp.com","messagingSenderId":"294097294392"})),
+    provideFirestore(() => getFirestore())
   ],
   providers: [],
   bootstrap: [AppComponent]
