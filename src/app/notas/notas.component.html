@@ -9,27 +9,27 @@
 <body>
     <div class="contenedor">
         <h1>Crear</h1>
-
-        <div class="nota">
-            <label for="texto1">Titulo:</label>
-            <br>
-            <input type="text" id="texto1" />
-        </div>
-
-        <div class="nota">
-            <label for="texto2">Fecha(Opcional):</label>
-            <br>
-            <input type="text" id="texto2" />
-        </div>
-
-        <div class="nota">
-            <label for="texto3">Detalles:</label>
-            <br>
-            <input type="text" id="texto3" />
-        </div>
-
-        <button class="enviar">Enviar</button>
-        
+        <form [formGroup]="formulario" (ngSubmit)="guardarNota()">
+            <div class="nota">
+                <label for="titulo">Título:</label>
+                <br>
+                <input type="text" id="titulo" formControlName="titulo" />
+            </div>
+    
+            <div class="nota">
+                <label for="fecha">Fecha (Opcional):</label>
+                <br>
+                <input type="text" id="fecha" formControlName="fecha" />
+            </div>
+    
+            <div class="nota">
+                <label for="detalles">Detalles:</label>
+                <br>
+                <input type="text" id="detalles" formControlName="detalles" />
+            </div>
+    
+            <button type="submit" class="enviar">Enviar</button>
+        </form>
     </div>
 </body>
 </html>
