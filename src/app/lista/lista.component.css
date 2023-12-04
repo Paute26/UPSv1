@@ -1,0 +1,22 @@
+.titulo {
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: aliceblue;
+}
+.contenedor {
+    text-align: center;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: aliceblue;
+}
+
+.eliminar {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #e7093d;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
