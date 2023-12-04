@@ -5,10 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { getFirestore, provideFirestore } from '@angular/fire/firestore';
+import { NotasComponent } from './notas/notas.component';
+import { ListaComponent } from './lista/lista.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NotasComponent,
+    ListaComponent
   ],
   imports: [
     BrowserModule,

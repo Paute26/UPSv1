@@ -1,46 +1,19 @@
-<h1>HOLA UPS</h1>
- 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>División Vertical con Formulario</title>
-  <link rel="stylesheet" href="app.component.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="app.component.css">
+    <title>Notas</title>
 </head>
 <body>
-
-<div class="container">
-  <!-- Lado Izquierdo - Formulario -->
-  <div class="left-side">
-    <div class="form-container">
-      <h2 style="text-align: center;">Formulario</h2>
-      <form>
-        <div class="form-group">
-          <label for="campo1">Campo 1</label>
-          <input type="text" id="campo1" placeholder="Ingrese Campo 1">
-        </div>
-
-        <div class="form-group">
-          <label for="campo2">Campo 2</label>
-          <input type="text" id="campo2" placeholder="Ingrese Campo 2">
-        </div>
-
-        <div class="form-group">
-          <label for="campo3">Campo 3</label>
-          <input type="text" id="campo3" placeholder="Ingrese Campo 3">
-        </div>
-
-        <button type="submit">Enviar</button>
-      </form>
+    <div class="contenedor">
+        <h1>Bienvenidos</h1>
+        <button routerLink="/notas" class="boton">Crear Nota</button>
+        <button routerLink="/lista" class="boton">Lista de Notas</button>
+        <br>
+        <button routerLink="/" class="boton">Cerrar</button>
     </div>
-  </div>
-
-  <!-- Lado Derecho - Espacio en Blanco -->
-  <div class="right-side">
-    <!-- Espacio en Blanco -->
-  </div>
-</div>
-
+    <router-outlet></router-outlet>
 </body>
 </html>
