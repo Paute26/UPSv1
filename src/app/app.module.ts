@@ -1,5 +1,5 @@
 // app.module.ts
-import { NgModule } from '@angular/core';
+import { NgModule, isDevMode } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
@@ -10,6 +10,7 @@ import { AppComponent } from './app.component';
 import { NotasComponent } from './notas/notas.component';
 import { ListaComponent } from './lista/lista.component';
 import { EditarComponent } from './editar/editar.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,13 @@ import { EditarComponent } from './editar/editar.component';
       "messagingSenderId": "294097294392"
     })),
     provideFirestore(() => getFirestore()),
-    FormsModule
+    FormsModule,
+    ServiceWorkerModule.register('ngsw-worker.js', {
+      enabled: !isDevMode(),
+      // Register the ServiceWorker as soon as the application is stable
+      // or after 30 seconds (whichever comes first).
+      registrationStrategy: 'registerWhenStable:30000'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
