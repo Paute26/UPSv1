@@ -1,11 +1,13 @@
-<div class="titulo" >
+<!-- lista.component.html -->
+<div class="titulo">
     <h2>Notas</h2>
 </div>
 <div class="contenedor" *ngFor="let nota of notas">
     <h3>{{ nota.titulo }}</h3>
     <p>{{ nota.fecha }}</p>
     <p>{{ nota.detalles }}</p>
-    <button type="delete" class="eliminar">Eliminar</button>
-    <!-- Agrega más campos según la estructura de tus datos en Firestore -->
+    <button type="delete" class="eliminar" (click)="onClickDelete(nota)">Eliminar</button>
+    <button type="edit" [routerLink]="['/editar', nota.id]">Editar</button>
 </div>
+
   

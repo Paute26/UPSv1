@@ -1,0 +1,16 @@
+<!-- editar.component.html -->
+<div class="titulo">
+    <h2>Editar Nota</h2>
+</div>
+<div class="contenedor">
+    <form [formGroup]="formulario">
+        <label for="titulo">Título:</label>
+        <input type="text" id="titulo" formControlName="titulo" class="form-control" required>
+        <label for="fecha">Fecha:</label>
+        <input type="text" id="fecha" formControlName="fecha" class="form-control">
+        <label for="detalles">Detalles:</label>
+        <input type="text" id="detalles" formControlName="detalles" class="form-control">
+    </form>
+    <button type="button" class="guardar" (click)="guardarCambios()">Guardar</button>
+    <button type="button" class="cancelar" (click)="cancelarEdicion()">Cancelar</button>
+</div>

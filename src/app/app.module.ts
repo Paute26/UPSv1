@@ -1,7 +1,7 @@
 // app.module.ts
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { getFirestore, provideFirestore } from '@angular/fire/firestore';
 
@@ -9,12 +9,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NotasComponent } from './notas/notas.component';
 import { ListaComponent } from './lista/lista.component';
+import { EditarComponent } from './editar/editar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NotasComponent,
-    ListaComponent
+    ListaComponent,
+    EditarComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +30,8 @@ import { ListaComponent } from './lista/lista.component';
       "authDomain": "upsv1-2.firebaseapp.com",
       "messagingSenderId": "294097294392"
     })),
-    provideFirestore(() => getFirestore())
+    provideFirestore(() => getFirestore()),
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
