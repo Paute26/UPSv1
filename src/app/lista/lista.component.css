@@ -20,3 +20,12 @@
     font-size: 16px;
     cursor: pointer;
 }
+
+.editar {
+    margin-top: 2px;
+    padding: 10px 20px;
+    background-color: #285efd;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}

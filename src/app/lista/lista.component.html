@@ -7,7 +7,7 @@
     <p>{{ nota.fecha }}</p>
     <p>{{ nota.detalles }}</p>
     <button type="delete" class="eliminar" (click)="onClickDelete(nota)">Eliminar</button>
-    <button type="edit" [routerLink]="['/editar', nota.id]">Editar</button>
+    <button type="edit" class="editar" [routerLink]="['/editar', nota.id]">Editar</button>
 </div>
 
   
